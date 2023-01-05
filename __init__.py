@@ -29,6 +29,8 @@ class RetroToonsSkill(OVOSCommonPlaybackSkill):
 
     def initialize(self):
         url = "https://www.youtube.com/channel/UCfeIkx_3ajdIvFtsHWduThg"
+        bootstrap = "https://github.com/JarbasSkills/skill-retrotoons/raw/dev/bootstrap.json"
+        self.archive.bootstrap_from_url(bootstrap)
         self.archive.monitor(url)
         self.archive.setDaemon(True)
         self.archive.start()
